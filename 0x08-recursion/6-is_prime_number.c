@@ -1,44 +1,33 @@
 #include "main.h"
-/**
- * helperfunction - func
- * @num: number
- * @i: possible
- *
- * Return: 0 or 1
- */
-int helperfunction(int num, int i)
-{
-	if (i < num)
-	{
-		if (num % i == 0)
-		{
-			return (0);
-		}
-		else
-		{
-			return (helperfunction(num, i + 1));
-		}
-	}
-	else
-	{
-		return (1);
-	}
-}
+
+int actual_prime(int n, int i);
+
 /**
  * is_prime_number - func
  * @n: number
  *
- * Return: 1 if number is prime.
- * 0 not.
+ * Return: 1 if n prime, 0 if not
  */
 int is_prime_number(int n)
 {
-	if (n <= i)
-	{
+	if (n <= 1)
 		return (0);
-	}
-	else
-	{
-		return (helperfunction(n, 2));
-	}
+	return (actual_prime(n, n - 1));
 }
+
+/**
+ * actual_prime - calc
+ * @n: num
+ * @i: itera
+ *
+ * Return: 1 if prime, 0 if not
+ */
+int actual_prime(int n, int i)
+{
+	if (i == 1)
+		return (1);
+	if (n % i == 0 && i > 0)
+		return (0);
+	return (actual_prime(n, i - 1));
+}
+	
