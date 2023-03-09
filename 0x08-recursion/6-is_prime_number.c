@@ -28,7 +28,7 @@ int helperfunction(int num, int i)
  * is_prime_number - func
  * @n: number
  *
- * Return: 1
+ * Return: 1 if number is prime.
  * 0 not.
  */
 int is_prime_number(int n)
