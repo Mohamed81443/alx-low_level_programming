@@ -7,7 +7,7 @@ int _strlen_recursion(char *s);
  * is_palindrome - func
  * @s: string
  *
- * Return: 1 
+ * Return: 1 if it is, 0 it is not
  */
 int is_palindrome(char *s)
 {
@@ -24,7 +24,7 @@ int is_palindrome(char *s)
  */
 int _strlen_recursion(char *s)
 {
-	if (*s == '\n')
+	if (*s == '\0')
 			return (0);
 			return (1 + _strlen_recursion(s + 1));
 }
